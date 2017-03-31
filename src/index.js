@@ -1,25 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
-import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
+import { syncHistoryWithStore } from 'react-router-redux'
+import configureStore from './stores/configureStore'
 import { App, Home, Foo, Bar } from './components'
-import * as reducers from './reducers'
 import './index.css'
 
-// Add the reducer to your store on the `routing` key
-/* eslint-disable no-underscore-dangle */
-const store = createStore(
-  combineReducers({
-    ...reducers,
-    routing: routerReducer,
-  }),
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)
-/* eslint-enable */
-
-// Create an enhanced history that syncs navigation events with the store
+const store = configureStore()
 const history = syncHistoryWithStore(browserHistory, store)
 
 ReactDOM.render(
