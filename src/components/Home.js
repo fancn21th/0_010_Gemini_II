@@ -1,26 +1,12 @@
-import React, { PropTypes } from 'react'
-import { connect } from 'react-redux'
-import * as actions from '../actions/count'
+import React from 'react'
 
-function Home({ number, increase, decrease }) {
-  return (
-    <div>
-      Some state changes:
-      {number}
-      <br />
-      <button onClick={() => increase(1)}>Increase</button>
-      <button onClick={() => decrease(1)}>Decrease</button>
-    </div>
-  )
-}
+const Home = () => (
+  <div className="jumbotron">
+    <h1>爱工作欢迎您！</h1>
+    <p>
+      <a className="btn btn-lg btn-primary">探索&raquo;</a>
+    </p>
+  </div>
+)
 
-Home.propTypes = {
-  number: PropTypes.number.isRequired,
-  increase: PropTypes.func.isRequired,
-  decrease: PropTypes.func.isRequired,
-}
-
-export default connect(
-  state => ({ number: state.count.number }),
-  actions
-)(Home)
+export default Home
