@@ -12,7 +12,6 @@ class Login extends React.Component {
   login = () => {
     const mobile = this.mobileField.value
     const password = this.passwordField.value
-
     // if(!mobileValidator.validate(mobile)){
     //     this.setState({
     //         errorText: INVALID_MOBILE

@@ -1,3 +1,4 @@
+import 'babel-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
@@ -11,7 +12,7 @@ import LoginContainer from './containers/LoginContainer'
 import 'bootstrap/dist/css/bootstrap.css'
 import './index.css'
 
-const store = configureStore()
+const store = configureStore(browserHistory)
 const history = syncHistoryWithStore(browserHistory, store)
 
 ReactDOM.render(
