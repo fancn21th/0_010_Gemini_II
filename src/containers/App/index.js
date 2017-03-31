@@ -26,7 +26,7 @@ export default function App({ children }) {
             <ul className="nav navbar-nav">
               <li className="active"><Link to="/">首页</Link></li>
               <li><Link to="/login">登录</Link></li>
-              <li><Link to="/foo">注册</Link></li>
+              <li><Link to="/login">注册</Link></li>
             </ul>
           </div>
         </div>

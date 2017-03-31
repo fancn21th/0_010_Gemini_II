@@ -4,7 +4,8 @@ import { Provider } from 'react-redux'
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 import { syncHistoryWithStore } from 'react-router-redux'
 import configureStore from './stores/configureStore'
-import { App, Home, Foo } from './components'
+import App from './containers/App'
+import Home from './containers/Home'
 import LoginContainer from './containers/LoginContainer'
 
 import 'bootstrap/dist/css/bootstrap.css'
@@ -18,7 +19,6 @@ ReactDOM.render(
     <Router history={history}>
       <Route path="/" component={App}>
         <IndexRoute component={Home} />
-        <Route path="foo" component={Foo} />
         <Route path="login" component={LoginContainer} />
       </Route>
     </Router>
