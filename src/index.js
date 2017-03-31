@@ -4,11 +4,9 @@ import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
-import Home from './Home'
-import Bar from './Bar'
-import App from './App'
-import Foo from './Foo'
+import { App, Home, Foo, Bar } from './components'
 import * as reducers from './reducers'
+import './index.css'
 
 // Add the reducer to your store on the `routing` key
 /* eslint-disable no-underscore-dangle */
