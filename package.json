@@ -6,7 +6,8 @@
   "scripts": {
     "build": "set NODE_ENV=production&webpack -p --progress --colors",
     "start": "webpack-dev-server --progress --colors --content-base dist --inline --hot --open",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "lint": "eslint src/**"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,11 @@
     "babel-preset-stage-1": "^6.22.0",
     "babel-register": "^6.24.0",
     "css-loader": "^0.28.0",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb": "^8.0.0",
+    "eslint-plugin-import": "^1.7.0",
+    "eslint-plugin-jsx-a11y": "^1.2.0",
+    "eslint-plugin-react": "^5.0.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.10.1",
     "style-loader": "^0.16.1",
