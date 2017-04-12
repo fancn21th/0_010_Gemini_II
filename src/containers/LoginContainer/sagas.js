@@ -23,6 +23,7 @@ function* login() {
     yield put(push('/'))
   } catch (e) {
     yield put(loginFailed(e.message))
+    yield put(push('/'))
   }
 }
 
