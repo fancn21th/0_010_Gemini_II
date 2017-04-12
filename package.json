@@ -4,10 +4,9 @@
   "description": "Gemini Sample Project Reborn",
   "main": "index.js",
   "scripts": {
-    "build": "set NODE_ENV=production&webpack -p --progress --colors",
-    "start": "webpack-dev-server --progress --colors --content-base dist --inline --hot --open",
+    "start": "babel-node devServer.js",
     "test": "jest --watch",
-    "lint": "eslint src/**"
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
